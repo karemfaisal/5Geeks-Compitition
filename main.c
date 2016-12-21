@@ -1,4 +1,6 @@
 /* Find How many times a word appears in another sentence */
+/* Notice : 5Geeks didn't carried out the promise of announcing the winners , They are liars */ 
+
 #include<stdio.h>
 #include<string.h>
 
