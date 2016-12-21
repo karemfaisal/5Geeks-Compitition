@@ -3,7 +3,7 @@
 
 main()
 {
-    char string [20] , sentence[2000];
+    char string [20] , sentence[2000]; 
     int x ,i ,j , result , l ,t;
     gets(string);
     gets(sentence);
@@ -12,33 +12,30 @@ main()
     l=0;
 
     result = 0;
-    for (i=0;sentence[i]!='\0';i++)
+    for (i=0;sentence[i]!='\0';i++) /* check every character in the sentence */
     {
-        if ( sentence [i] == string[0])
+        if ( sentence [i] == string[0])   /* if a character in the sentence mathcs the first letter in the word */
         {
-             l=0;
-             t=0;
-            for (j=i ; j<(i+x) ; j++)
+             l=0; /* reset l */
+             t=0;  /* reset t */
+            for (j=i ; j<(i+x) ; j++) /* check if the all word in the sentence sequentially */
             {
 
                 if ( sentence[j] == string[t])
                 {
-                    l++;
+                    l++; /* how many characters are matched in a row ,if l=length of the word then we have the first duplicate*/
                 }
-                t++;
+                t++;  /* to check the next character */
             }
 
-            if ( l == x)
+            if ( l == x)   /* if l = length of the word then we have a Duplicate */
             {
-                result++;
-                i+=x-1;
-
+                result++;  /* Number of Duplicates */
+                i+=x-1; /* to jump to the character after the match in the Main loop not to the next character */
             }
-
         }
-
     }
 
-printf("The Result is %d",result);
+printf("The Result is %d",result);  /* Print The Result */
 
 }
