@@ -1,3 +1,4 @@
+/* Find How many times a word appears in another sentence */
 #include<stdio.h>
 #include<string.h>
 
